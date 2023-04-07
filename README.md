@@ -53,7 +53,7 @@ website - contains all files for the server side rendering application. SSR is w
 
 ## Platform Architecture
 
-
+![alt text](https://github.com/DZykov/Chrono_public/blob/main/images/diagram.jpg?raw=true)
 
 ## To-Do and Issues
 
