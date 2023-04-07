@@ -1,0 +1,106 @@
+:root {
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button {
+    max-width: 100px;
+    background-color: var(--first-color);
+    color: #FFF;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+    padding: .75rem 1rem;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    align-items: center;
+}
+
+.post_container {
+    overflow: initial;
+    display: flex;
+    justify-content: center;
+}
+
+.post_content {
+    align-items: center;
+    padding: 0 0rem;
+}
+
+.post_img {
+    width: 80%;
+    max-width: 700px;
+    min-width: 300px;
+    border-radius: 1rem;
+    justify-self: center;
+}
+
+.post_title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-5);
+    text-align: center;
+}
+
+.post_description {
+    text-align: center;
+    margin-bottom: var(--mb-0-75);
+}
+
+.comment_data,
+.comment_header {
+    flex-direction: column;
+    text-align: center;
+}
+
+.comment_data {
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: var(--mb-1);
+}
+
+.comment_img {
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    justify-content: center;
+    margin-right: var(--mb-0-75);
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    left: calc(50% - 30px);
+}
+
+.comment_name {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.comment_client {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.comment_description {
+    margin-bottom: var(--mb-0-75);
+    text-align: center;
+}
+
+/*change font size on screens*/

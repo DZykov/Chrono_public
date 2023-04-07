@@ -1,0 +1,49 @@
+:root {
+
+    --first-color: rgb(102, 51, 153);
+    --first-color-alt: rgb(102, 51, 153);
+    --title-color: black;
+
+    --body-font: 'Times New Roman', sans-serif;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 1rem;
+    --medium-font-size: 0.9rem;
+    --small-font-size: 0.8rem;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .8rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: white;
+}
+
+.container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

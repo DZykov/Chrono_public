@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/post.css">
+    <link rel="stylesheet" href="../css/app_bar.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    {{^user.username}}
+    <meta http-equiv="refresh" content="0; url=/error.html" />
+    {{/user.username}}
+    <title>{{user.username}}</title>
+    <meta name="description" content="{{user.description}}" />
+    <meta property="og:title" content="{{user.username}}" />
+    <meta property="og:site_name" content="Chrono.pw" />
+    <meta property="og:url" content="https://chrono.pw/{{user.username}}" />
+    <meta property=" og:type" content="profile" />
+    <meta name="keywords" content="{{post.tags}}" />
+    <meta name="author" content="{{user.username}}" />
+    <meta property="og:image" content="{{user.photo_url}}" />
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+        <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+            <span class="material-icons">menu</span>
+        </button>
+
+        <div class="navbar-title">
+            <h1 class="logo">
+                <a href="/" style="color: black; text-decoration: none;">
+                    CHRON<a href="/" style="color: rgb(102, 51, 153); text-decoration: none;">O</a>
+                </a>
+            </h1>
+        </div>
+
+        <nav class="navbar-menu">
+            <button onclick="window.location.href='/about.html'" type="button" class="active">About</button>
+            <button onclick="window.location.href='https:\/\/app.chrono.pw'" type="button" class="active">Sign
+        </nav>
+
+    </nav>
+
+    <header class="profile container">
+
+
+        <div class="profile_container grid">
+            <div class="profile_data">
+                <div class="profile_border">
+
+                    <div class="profile_img" style="background-image: url({{user.photo_url}});">
+                    </div>
+                </div>
+
+                <h2 class="profile_name" style="max-width: 700px; margin:auto;">{{user.username}}</h2>
+                <br>
+                <h3 class="profile_description" style="max-width: 700px; margin:auto;">{{user.description}}</h3>
+
+
+            </div>
+
+            <div class="profile_info grid">
+
+                <div>
+                    <p class="profile_info_tag">
+                        Posts
+                    </p>
+                    <h3 class="profile_info_data">{{posts.meta.total_count}}</h3>
+                </div>
+
+                <div>
+                    <p class="profile_info_tag">
+                        Followers
+                    </p>
+                    <h3 class="profile_info_data">{{user.followers_num}}</h3>
+                </div>
+
+                <div>
+                    <p class="profile_info_tag">Following</p>
+                    <h3 class="profile_info_data">{{user.following_num}}</h3>
+                </div>
+
+            </div>
+
+
+        </div>
+    </header>
+
+    {{#posts.data}}
+    <br>
+    <br>
+    <div class="post_container">
+        <div class="post_container container" style="max-width: 1110px; padding-left: 20px;  padding-right: 20px;">
+            <div class="post_content grid">
+                <a href="/p/{{url}}">
+                    <h3 class="post_title"
+                        style="overflow-wrap: break-word; max-width: 375px; text-align: center; margin: auto">
+                        {{post.name}}&nbsp;</h3>
+                </a>
+                <a href="/p/{{url}}"></a><img src="{{photo_url}}" alt="" class="post_img"></a>
+
+                <div class="post_content">
+                    <p class="post_description">{{description}}</p>
+                    <p>{{likes}} likes | {{visits}} visits | {{views}} views</p>
+                    <p>Tags: {{tags}}</p>
+                    <p>Created at: {{created_at}}</p>
+                    <br>
+                    <a href="/p/{{url}}" class="button">Read</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/posts.data}}
+
+    <br>
+    <br>
+
+    <script type="text/javascript">
+        const toggleMenuOpen = () => document.body.classList.toggle("open");
+    </script>
+
+</body>
+
+</html>

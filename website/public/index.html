@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="css/app_bar.css">
+    <link rel="stylesheet" href="css/general.css">
+    <meta name="description" content={{user.description}} />
+    <title>Chrono</title>
+    <meta name="description" content="Blogging platform" />
+    <meta property="og:title" content="Chrono" />
+    <meta property="og:site_name" content="Chrono.pw" />
+    <meta property="og:url" content="https://chrono.pw/" />
+    <meta property="og:description" content="Chrono is easy to use blogging platform" />
+    <meta property=" og:type" content="article" />
+    <meta name="keywords" content="Blog, articles, blogging, hobby, interests">
+    <meta name="author" content="DZ">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+        <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+            <span class="material-icons">menu</span>
+        </button>
+
+        <div class="navbar-title">
+            <h1 class="logo">
+                <a href="/" style="color: black; text-decoration: none;">
+                    CHRON<a href="/" style="color: rgb(102, 51, 153); text-decoration: none;">O</a>
+                </a>
+            </h1>
+        </div>
+
+        <nav class="navbar-menu">
+            <button onclick="window.location.href='/about.html'" type="button" class="active">About</button>
+            <button onclick="window.location.href='https:\/\/app.chrono.pw'" type="button" class="active">Sign
+        </nav>
+
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="post_container">
+        <div class="post_container container" style="max-width: 1110px; padding-left: 20px;  padding-right: 20px;">
+            <div class="post_content grid">
+                <div class="post_content">
+                    </p>
+                    <div class="ql-snow">
+                        <div class="ql-editor">
+                            <h1 class="ql-align-center">Welcome to Chrono!</h1>
+                            <p>We are excited to have you join our community of bloggers and readers. </p>
+                            <p>Our platform is designed to make blogging easy and enjoyable for everyone, whether you
+                                are a
+                                seasoned blogger or just starting out. </p>
+                            <p><br></p>
+                            <p>Here are some of the features that you can look forward to: </p>
+                            <ol>
+                                <li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Simple and
+                                    intuitive interface: Our app is easy to use, with a clean and simple design that
+                                    lets
+                                    you focus on writing.</li>
+                                <li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Open network:
+                                    Each
+                                    created blog or profile is not only available on our platform but we generate a
+                                    mini-website for each <a href="https://chrono.pw/1" rel="noopener noreferrer"
+                                        target="_blank">blog</a> and <a href="http://chrono.pw/post/1"
+                                        rel="noopener noreferrer" target="_blank">profile</a> ("blog" and "profile" will
+                                    redirect to examples respecteviley).</li>
+                                <li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Global
+                                    sharing:
+                                    Share your blog posts not only on social media but on the world wide web.</li>
+                                <li data-list="bullet"><span class="ql-ui" contenteditable="false"></span>Community
+                                    engagement: Connect with other bloggers and readers by commenting on posts,
+                                    following
+                                    other bloggers, and more.</li>
+                                <li data-list="bullet"><span class="ql-ui"
+                                        contenteditable="false"></span>Mobile-friendly:
+                                    Our app is optimised for mobile devices, so you can read blog posts on the go.</li>
+                            </ol>
+                            <p> </p>
+                            <p>We hope that you will enjoy using our app as much as we enjoyed creating it. </p>
+                            <p><br></p>
+                            <p><span style="background-color: rgba(0, 0, 0, 0);">If you have questions</span><strong
+                                    style="background-color: rgba(0, 0, 0, 0);">,</strong><span
+                                    style="background-color: rgba(0, 0, 0, 0);"> please feel free to read FAQ
+                                    page.</span>
+                            </p>
+                            <p><br></p>
+                            <p>Happy blogging!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <script type="text/javascript">
+        const toggleMenuOpen = () => document.body.classList.toggle("open");
+    </script>
+
+</body>
+
+</html>

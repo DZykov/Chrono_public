@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.0-dev.4/quill.snow.min.css" />
+    <link rel="stylesheet" href="../css/post.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/app_bar.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    {{^post.name}}
+    <meta http-equiv="refresh" content="0; url=/error.html" />
+    {{/post.name}}
+    <title>{{post.name}}</title>
+    <meta name="description" content="{{post.description}}" />
+    <meta property="og:title" content="{{post.name}}" />
+    <meta property="og:site_name" content="Chrono.pw" />
+    <meta property="og:url" content="https://chrono.pw/p/{{post.url}}" />
+    <meta property="og:description" content="{{post.tags}}" />
+    <meta property=" og:type" content="article" />
+    <meta name="keywords" content="{{post.tags}}">
+    <meta name="author" content="{{post.username}}">
+    <meta property="og:image" content="{{posy.photo_url}}" />
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+        <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+            <span class="material-icons">menu</span>
+        </button>
+
+        <div class="navbar-title">
+            <h1 class="logo">
+                <a href="/" style="color: black; text-decoration: none;">
+                    CHRON<a href="/" style="color: rgb(102, 51, 153); text-decoration: none;">O</a>
+                </a>
+            </h1>
+        </div>
+
+        <nav class="navbar-menu">
+            <button onclick="window.location.href='/about.html'" type="button" class="active">About</button>
+            <button onclick="window.location.href='https:\/\/app.chrono.pw'" type="button" class="active">Sign
+        </nav>
+
+    </nav>
+
+    <header class="profile container">
+
+
+        <div class="profile_container grid">
+            <div class="profile_data">
+                <div class="profile_border">
+                    <a href="/{{post.username}}">
+                        <div class="profile_img" style="background-image: url({{post.avatar}});">
+                        </div>
+                    </a>
+                </div>
+                <a href="/{{post.username}}">
+                    <h2 class="profile_name">{{post.username}}</h2>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <br>
+    <br>
+    <div class="post_container">
+        <div class="post_container container"
+            style="max-width: 1110px; padding-left: 20px;  padding-right: 20px; min-width: 400px;">
+            <div class="post_content grid">
+                <h3 class="post_title"
+                    style="overflow-wrap: break-word; max-width: 375px; text-align: center; margin: auto">
+                    {{post.name}}&nbsp;</h3>
+                <img src="{{post.photo_url}}" alt="" class="post_img">
+
+                <div class="post_content">
+                    <p class="post_description">{{post.description}}</p>
+                    </p>
+                    <div class="ql-snow">
+                        <div class="ql-editor">
+                            {{{post.body}}}
+                        </div>
+                    </div>
+                    <p>{{post.likes}} likes | {{post.visits}} visits | {{post.views}} views</p>
+                    <p>Tags: {{post.tags}}</p>
+                    <p>Created at: {{post.created_at}}</p>
+                    <a href="/{{post.username}}">Read more by author...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{#comments.data}}
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="container"
+            style="border-style: solid; border-width: 1px; border-color: #74747e; max-width: 700px; margin: auto;">
+            <div class="comment_data">
+                <div class="comment_header">
+                    <a href="/{{user_id}}">
+                        <div class="comment_img" style="background-image: url({{photo_url}});">
+                        </div>
+                    </a>
+                    <div>
+                        <a href="/{{user_id}}">
+                            <h3 class="comment_name" style="overflow-wrap: break-word; padding: 7px;">{{username}}</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="comment_description" style="overflow-wrap: break-word; padding: 7px;">
+                {{text}}
+            </p>
+        </div>
+    </div>
+    {{/comments.data}}
+
+    <br>
+    <br>
+
+    <script type="text/javascript">
+        const toggleMenuOpen = () => document.body.classList.toggle("open");
+    </script>
+
+</body>
+
+</html>
