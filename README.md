@@ -47,11 +47,11 @@ The idea was to create a blogging and publishing platform with a word processor.
 
 ## Repo Structure
 
-app - contains all files for the web app. Web app is written in dart with Flutte flamework.
+app - contains all files for the web app. Web app is written in dart with Flutter flamework.
 
 backend - contains all files for the API server. API server is written in Python with Flask framework. Additionaly, this folder has small admin CLI tool.
 
-website - contains all files for the server side rendering application. SSR is written js with Node.js framework and logic-less template syntax Mustache.
+website - contains all files for the server side rendering application. SSR is written in js with Node.js framework and logic-less template syntax Mustache.
 
 ## Platform Architecture
 
