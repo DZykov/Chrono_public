@@ -4,45 +4,73 @@ This is a fully scaled project of a blogging platform in production.
 
 ## Index
    - [Demo](#Demo "Goto Demo")
-   - [Game-play](#Game-play "Goto Game-play")
-   - [Installation](#Installation "Goto Installation")
-   - [Game Features](#Game-Features "Goto Game-Features")
-   - [Controls](#Controls "Goto Controls")
-   - [Contributing](#Contributing "Goto Contributing")
-      - [Original Contributers](#Contributing "Goto Contributing")
-      - [Future Contributers](#Contributing "Goto Contributing")
-      - [Software Community Contributers](#Contributing "Goto Contributing")
+   - [Great Idea](#Great-Idea "Goto great Idea")
+   - [Features](#Features "Goto Features")
+   - [Repo Structure](#Repo-Structure "Goto Repo Structure")
+   - [Platform Architecture](#Platform-Architecture "Goto Platform Architecture")
    - [To-Do and Issues](#To-Do-and-Issues "Goto ToDo-and-Issues")
 
 ## Demo
 
-Follow the youtube video to see the actual game:
+[Web App](app.chrono.pw)
 
-[![Demo video (Link to Youtube)](https://img.youtube.com/vi/2f4NOmMey8I/0.jpg)](https://www.youtube.com/watch?v=2f4NOmMey8I)
+[Website with blogs](chrono.pw) 
 
-## Game-play
+[Example of a profile](chrono.pw/demid_zykov)
 
-This is a modern take on the classic game Space Invaders but with a few differences. First of all, the player has an 
-option of choosing the colour of a ship. Secondly, enemies have different movement: first stage is moving from
-left to right and vice-versa, while second stage is somewhat(pseudo) randomized and based on sin function. Thirdly,
-enemies shoot randomly and allowed to have unlimited amount of bullets on a screen. Last and not least, the less enemies are on a
-screen more they shoot.
-![alt text](https://github.com/dzykov/CSC290/blob/master/Showscreen.jpg?raw=true)
+[Example of a post](https://chrono.pw/p/introducing_chrono)
 
-## Platfoorm Features
-   - Player has 10 lives
-   - Moving Space Invaders that shoot to reduce player's health
-   - Barriers to block the space invaders bullets
-   - Wild Mode starts when 14 enemies left
-   - Ability to choose the colour of a ship
-   - Start Menu
+## Great Idea
+
+The idea was to create a blogging and publishing platform with a word processor. Moreover, the main goal was to develop an app that allows easily to make an article/blog and publish it not only within the platform but internet. Thus, each registered user has an SEO-friendly profile page; moreover, each published article/blog is SEO-friendly. Each article/blog is technically searchable. Additionally, all generated pages and the web app are responsive. 
+
+## Features
+
+### Web App
+   - Likes
+   - Comments
+   - Tags
+   - Search functionality
+   - General statistics about posts/articles
+   - Posts/articles could be editted or saved as draft
+   - Word processor supports all basic manipulations with text: bold, italic, underline, cross, font sizes, text alignment, tables, lists, headers and quatations.
+   - Word processor supports inline pictures and code blocks.
+   - Supports multiple platforms: web, android, ios, etc.
+   - Fully responsive
+
+### Website
+   - All pages are SEO friendly
+   - Supports all devices and screens
+   - Fully responsive
+
+## Repo Structure
+
+app - contains all files for the web app. Web app is written in dart with Flutte flamework.
+
+backend - contains all files for the API server. API server is written in Python with Flask framework. Additionaly, this folder has small admin CLI tool.
+
+website - contains all files for the server side rendering application. SSR is written js with Node.js framework and logic-less template syntax Mustache.
+
+## Platform Architecture
+
+
 
 ## To-Do and Issues
-   What we wish we completed and what other game players wish was implemented:
-- [x] Add ability to choose the colour of ship   
-- [x] Add player's health on screen
-- [ ] Show what kind of mode the game is in
-- [x] Create levels based on difficulty (insane mode added)
-- [x] Add sounds and music
-- [x] Add win/lose scenario with animations
+
+### Web App
+- [ ] Refractor the code for the web app
+- [ ] Fix rendering bugs in the web app
+    - [ ] Firefox will not render posts with large embeded images.
+    - [ ] Fix "Create" and "Edit" tabs for mobiles: on some devices keyboard overlays the input field.
+
+### Website
+- [ ] Add normal index and about pages
+- [ ] Reconfigure SEO
+- [ ] Make the website more pleasant
+
+### API
+- [ ] Add documentation for public api
+- [ ] Make admin panel
+- [ ] Optimize search functionality
+- [ ] Add functionality to search users (right now, only posts are searchable)
 
