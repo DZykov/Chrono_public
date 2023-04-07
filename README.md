@@ -12,11 +12,11 @@ This is a fully scaled project of a blogging platform in production.
 
 ## Demo
 
-[Web App](app.chrono.pw)
+[Web App](https://app.chrono.pw)
 
-[Website with blogs](chrono.pw) 
+[Website with blogs](https://chrono.pw) 
 
-[Example of a profile](chrono.pw/demid_zykov)
+[Example of a profile](https://chrono.pw/demid_zykov)
 
 [Example of a post](https://chrono.pw/p/introducing_chrono)
 
@@ -33,8 +33,8 @@ The idea was to create a blogging and publishing platform with a word processor.
    - Search functionality
    - General statistics about posts/articles
    - Posts/articles could be editted or saved as draft
-   - Word processor supports all basic manipulations with text: bold, italic, underline, cross, font sizes, text alignment, tables, lists, headers and quatations.
-   - Word processor supports inline pictures and code blocks.
+   - Word processor supports all basic manipulations with text: bold, italic, underline, cross, font sizes, text alignment, tables, lists, headers and colours.
+   - Word processor supports inline pictures, embedded quatations and code blocks.
    - Supports multiple platforms: web, android, ios, etc.
    - Fully responsive
 
@@ -74,3 +74,5 @@ website - contains all files for the server side rendering application. SSR is w
 - [ ] Optimize search functionality
 - [ ] Add functionality to search users (right now, only posts are searchable)
 
+### General
+- [ ] Add replies for comments
