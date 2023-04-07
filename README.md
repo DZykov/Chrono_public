@@ -20,6 +20,8 @@ This is a fully scaled project of a blogging platform in production.
 
 [Example of a post](https://chrono.pw/p/introducing_chrono)
 
+If you don't want to follow links, check folder "images".
+
 ## Great Idea
 
 The idea was to create a blogging and publishing platform with a word processor. Moreover, the main goal was to develop an app that allows easily to make an article/blog and publish it not only within the platform but internet. Thus, each registered user has an SEO-friendly profile page; moreover, each published article/blog is SEO-friendly. Each article/blog is technically searchable. Additionally, all generated pages and the web app are responsive. 
